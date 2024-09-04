@@ -1,0 +1,13 @@
+[project]
+name = "pixi_container_snake"
+version = "0.1.0"
+description = "Add a short description here"
+authors = ["Michael O'Hanrahan <104068149+michaelohanrahan@users.noreply.github.com>"]
+channels = ["conda-forge", "bioconda"]
+platforms = ["linux-64"]
+
+[tasks]
+
+[dependencies]
+python="3.11"
+snakemake="8.18"

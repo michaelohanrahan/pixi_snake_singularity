@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+hello        1
+total        1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep  4 18:54:02 2024]
+localrule hello:
+    output: data/hello.txt
+    jobid: 0
+    reason: Missing output files: data/hello.txt
+    resources: tmpdir=C:\Users\ohanrah\AppData\Local\Temp
+
+RuleException:
+CalledProcessError in file C:\git\pixi_container_snake\Snakefile, line 3:
+Command 'C:/git/pixi_container_snake/.pixi/envs/default/python.exe "C:\git\pixi_container_snake\.snakemake\scripts\tmpoqfbhb81.test.py"' returned non-zero exit status 1.
+[Wed Sep  4 18:54:03 2024]
+Error in rule hello:
+    jobid: 0
+    output: data/hello.txt
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake\log\2024-09-04T185402.766875.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

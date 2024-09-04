@@ -1,0 +1,87 @@
+C:\git\pixi_container_snake>build.bat
+
+C:\git\pixi_container_snake>pixi install
+ WARN Not installing dependency on current platform: (win-64) as it is not part of this project's supported platforms.
+The default environment has been installed.
+
+C:\git\pixi_container_snake>docker build -t pix-smk:naive . 
+[+] Building 51.9s (14/14) FINISHED                                                                                                                           docker:desktop-linux 
+ => [internal] load build definition from Dockerfile                                                                                                                          0.0s 
+ => => transferring dockerfile: 490B                                                                                                                                          0.0s 
+ => [internal] load metadata for ghcr.io/prefix-dev/pixi:0.26.1                                                                                                               0.6s 
+ => [internal] load .dockerignore                                                                                                                                             0.0s 
+ => => transferring context: 2B                                                                                                                                               0.0s 
+ => [1/9] FROM ghcr.io/prefix-dev/pixi:0.26.1@sha256:45d86bb788aaa24d215eff57712f250329486ca8f442b91959bc9ce7ce6e053c                                                         0.0s 
+ => [internal] load build context                                                                                                                                             0.0s 
+ => => transferring context: 402B                                                                                                                                             0.0s 
+ => CACHED [2/9] RUN apt-get update && apt-get install -y git build-essential                                                                                                 0.0s 
+ => CACHED [3/9] WORKDIR /app                                                                                                                                                 0.0s 
+ => [4/9] COPY workflow /app/workflow                                                                                                                                         0.1s 
+ => [5/9] COPY pixi.lock /app/pixi.lock                                                                                                                                       0.2s 
+ => [6/9] COPY pixi.toml /app/pixi.toml                                                                                                                                       0.1s 
+ => [7/9] RUN pixi install --locked && rm -rf ~/.cache/rattler                                                                                                               36.1s 
+ => [8/9] COPY entrypoint.sh /app/entrypoint.sh                                                                                                                               0.8s
+ => [9/9] RUN chmod 700 /app/entrypoint.sh                                                                                                                                    2.9s
+ => exporting to image                                                                                                                                                        9.1s
+ => => exporting layers                                                                                                                                                       8.7s
+ => => writing image sha256:512badd593051e39b7a5cb4b9907b37ea35b3d8f975e7360fce076e0b52e6738                                                                                  0.0s
+ => => naming to docker.io/library/pix-smk:naive                                                                                                                              0.1s 
+
+What's next:
+    View a summary of image vulnerabilities and recommendations → docker scout quickview 
+
+C:\git\pixi_container_snake>docker run --rm -it -p 8000:8000 pix-smk:naive
+ . "/tmp/pixi_env_f34.sh"
+root@d684267231fc:/app#  . "/tmp/pixi_env_f34.sh"
+(pixi_container_snake) root@d684267231fc:/app# snakemake
+Assuming unrestricted shared filesystem usage.
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+hello        1
+total        1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Sep  4 19:05:56 2024]
+localrule hello:
+    output: hello.txt
+    jobid: 0
+    reason: Missing output files: hello.txt
+    resources: tmpdir=/tmp
+
+[Wed Sep  4 19:05:57 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2024-09-04T190556.498312.snakemake.log
+(pixi_container_snake) root@d684267231fc:/app# exit
+logout
+
+C:\git\pixi_container_snake>docker history pix-smk:naive 
+IMAGE          CREATED              CREATED BY                                      SIZE      COMMENT
+512badd59305   About a minute ago   CMD ["pixi" "run" "entrypoint.sh"]              0B        buildkit.dockerfile.v0
+<missing>      About a minute ago   EXPOSE map[8000/tcp:{}]                         0B        buildkit.dockerfile.v0
+<missing>      About a minute ago   RUN /bin/sh -c chmod 700 /app/entrypoint.sh …   134B      buildkit.dockerfile.v0
+<missing>      About a minute ago   COPY entrypoint.sh /app/entrypoint.sh # buil…   134B      buildkit.dockerfile.v0
+<missing>      About a minute ago   RUN /bin/sh -c pixi install --locked && rm -…   411MB     buildkit.dockerfile.v0
+<missing>      About a minute ago   COPY pixi.toml /app/pixi.toml # buildkit        310B      buildkit.dockerfile.v0
+<missing>      About a minute ago   COPY pixi.lock /app/pixi.lock # buildkit        73.8kB    buildkit.dockerfile.v0
+<missing>      About a minute ago   COPY workflow /app/workflow # buildkit          141B      buildkit.dockerfile.v0
+<missing>      5 hours ago          WORKDIR /app                                    0B        buildkit.dockerfile.v0
+<missing>      5 hours ago          RUN /bin/sh -c apt-get update && apt-get ins…   350MB     buildkit.dockerfile.v0
+<missing>      6 weeks ago          COPY --chown=root:root --chmod=0555 /pixi /u…   32.2MB    buildkit.dockerfile.v0
+<missing>      2 months ago         /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B
+<missing>      2 months ago         /bin/sh -c #(nop) ADD file:d5da92199726e42da…   77.9MB
+<missing>      2 months ago         /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B
+<missing>      2 months ago         /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B
+<missing>      2 months ago         /bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH     0B
+<missing>      2 months ago         /bin/sh -c #(nop)  ARG RELEASE                  0B
+
+C:\git\pixi_container_snake>docker image ls pix-smk:naive
+REPOSITORY   TAG       IMAGE ID       CREATED              SIZE
+pix-smk      naive     512badd59305   About a minute ago   871MB
