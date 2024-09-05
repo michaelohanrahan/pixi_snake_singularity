@@ -1,0 +1,205 @@
+mohanrahan@l02968:~$ cp pixi.lock pixi.toml pixi_env.def setup_env.sh local_run/
+mohanrahan@l02968:~$ ls
+Snakefile  pixi.lock  pixi.toml  pixi_env.def  setup_env.sh  test.py
+mohanrahan@l02968:~/local_run$ chmod +x setup_env.sh
+mohanrahan@l02968:~/local_run$ ./setup_env.sh
+pixi is already installed.
+Installing dependencies...
+✔ The default environment has been installed.
+mohanrahan@l02968:~/local_run$ pixi list
+Package                               Version       Build                Size       Kind   Source
+_libgcc_mutex                         0.1           conda_forge          2.5 KiB    conda  _libgcc_mutex-0.1-conda_forge.tar.bz2
+_openmp_mutex                         4.5           2_gnu                23.1 KiB   conda  _openmp_mutex-4.5-2_gnu.tar.bz2
+amply                                 0.1.6         pyhd8ed1ab_0         21.4 KiB   conda  amply-0.1.6-pyhd8ed1ab_0.conda
+appdirs                               1.4.4         pyh9f0ad1d_0         12.5 KiB   conda  appdirs-1.4.4-pyh9f0ad1d_0.tar.bz2
+argparse-dataclass                    2.0.0         pyhd8ed1ab_0         11.9 KiB   conda  argparse-dataclass-2.0.0-pyhd8ed1ab_0.conda
+attmap                                0.13.2        pyhd8ed1ab_0         13.3 KiB   conda  attmap-0.13.2-pyhd8ed1ab_0.tar.bz2
+attrs                                 24.2.0        pyh71513ae_0         54.7 KiB   conda  attrs-24.2.0-pyh71513ae_0.conda
+brotli-python                         1.1.0         py311hfdbb021_2      342.2 KiB  conda  brotli-python-1.1.0-py311hfdbb021_2.conda
+bzip2                                 1.0.8         h4bc722e_7           246.9 KiB  conda  bzip2-1.0.8-h4bc722e_7.conda
+ca-certificates                       2024.8.30     hbcca054_0           155.3 KiB  conda  ca-certificates-2024.8.30-hbcca054_0.conda
+certifi                               2024.8.30     pyhd8ed1ab_0         159.9 KiB  conda  certifi-2024.8.30-pyhd8ed1ab_0.conda
+cffi                                  1.17.0        py311hf29c0ef_1      294.8 KiB  conda  cffi-1.17.0-py311hf29c0ef_1.conda
+charset-normalizer                    3.3.2         pyhd8ed1ab_0         45.5 KiB   conda  charset-normalizer-3.3.2-pyhd8ed1ab_0.conda
+coin-or-cbc                           2.10.12       h8b142ea_1           928 KiB    conda  coin-or-cbc-2.10.12-h8b142ea_1.conda
+coin-or-cgl                           0.60.7        h516709c_0           538.4 KiB  conda  coin-or-cgl-0.60.7-h516709c_0.conda
+coin-or-clp                           1.17.8        h1ee7a9c_0           1.1 MiB    conda  coin-or-clp-1.17.8-h1ee7a9c_0.conda
+coin-or-osi                           0.108.11      h6514dde_1           367.2 KiB  conda  coin-or-osi-0.108.11-h6514dde_1.conda
+coin-or-utils                         2.11.12       h99da652_1           646.8 KiB  conda  coin-or-utils-2.11.12-h99da652_1.conda
+coincbc                               2.10.12       1_metapackage        11.9 KiB   conda  coincbc-2.10.12-1_metapackage.conda
+colorama                              0.4.6         pyhd8ed1ab_0         24.6 KiB   conda  colorama-0.4.6-pyhd8ed1ab_0.tar.bz2
+conda-inject                          1.3.2         pyhd8ed1ab_0         10.1 KiB   conda  conda-inject-1.3.2-pyhd8ed1ab_0.conda
+configargparse                        1.7           pyhd8ed1ab_0         38.6 KiB   conda  configargparse-1.7-pyhd8ed1ab_0.conda
+connection_pool                       0.0.3         pyhd3deb0d_0         8.1 KiB    conda  connection_pool-0.0.3-pyhd3deb0d_0.tar.bz2
+datrie                                0.8.2         py311h459d7ec_7      157.7 KiB  conda  datrie-0.8.2-py311h459d7ec_7.conda
+docutils                              0.21.2        pyhd8ed1ab_0         393.8 KiB  conda  docutils-0.21.2-pyhd8ed1ab_0.conda
+dpath                                 2.2.0         pyha770c72_0         20.8 KiB   conda  dpath-2.2.0-pyha770c72_0.conda
+eido                                  0.2.2         pyhd8ed1ab_0         19.5 KiB   conda  eido-0.2.2-pyhd8ed1ab_0.conda
+exceptiongroup                        1.2.2         pyhd8ed1ab_0         19.9 KiB   conda  exceptiongroup-1.2.2-pyhd8ed1ab_0.conda
+gitdb                                 4.0.11        pyhd8ed1ab_0         51.6 KiB   conda  gitdb-4.0.11-pyhd8ed1ab_0.conda
+gitpython                             3.1.43        pyhd8ed1ab_0         153.2 KiB  conda  gitpython-3.1.43-pyhd8ed1ab_0.conda
+h2                                    4.1.0         pyhd8ed1ab_0         45.7 KiB   conda  h2-4.1.0-pyhd8ed1ab_0.tar.bz2
+hpack                                 4.0.0         pyh9f0ad1d_0         24.7 KiB   conda  hpack-4.0.0-pyh9f0ad1d_0.tar.bz2
+humanfriendly                         10.0          pyhd8ed1ab_6         71.7 KiB   conda  humanfriendly-10.0-pyhd8ed1ab_6.conda
+hyperframe                            6.0.1         pyhd8ed1ab_0         14.3 KiB   conda  hyperframe-6.0.1-pyhd8ed1ab_0.tar.bz2
+idna                                  3.8           pyhd8ed1ab_0         48.1 KiB   conda  idna-3.8-pyhd8ed1ab_0.conda
+immutables                            0.20          py311h459d7ec_1      53.1 KiB   conda  immutables-0.20-py311h459d7ec_1.conda
+importlib_resources                   6.4.4         pyhd8ed1ab_0         31.5 KiB   conda  importlib_resources-6.4.4-pyhd8ed1ab_0.conda
+iniconfig                             2.0.0         pyhd8ed1ab_0         10.8 KiB   conda  iniconfig-2.0.0-pyhd8ed1ab_0.conda
+jinja2                                3.1.4         pyhd8ed1ab_0         109 KiB    conda  jinja2-3.1.4-pyhd8ed1ab_0.conda
+jsonschema                            4.23.0        pyhd8ed1ab_0         72.6 KiB   conda  jsonschema-4.23.0-pyhd8ed1ab_0.conda
+jsonschema-specifications             2023.12.1     pyhd8ed1ab_0         16 KiB     conda  jsonschema-specifications-2023.12.1-pyhd8ed1ab_0.conda
+jupyter_core                          5.7.2         py311h38be061_0      93 KiB     conda  jupyter_core-5.7.2-py311h38be061_0.conda
+ld_impl_linux-64                      2.40          hf3520f5_7           691 KiB    conda  ld_impl_linux-64-2.40-hf3520f5_7.conda
+libblas                               3.9.0         23_linux64_openblas  14.5 KiB   conda  libblas-3.9.0-23_linux64_openblas.conda
+libcblas                              3.9.0         23_linux64_openblas  14.5 KiB   conda  libcblas-3.9.0-23_linux64_openblas.conda
+libffi                                3.4.2         h7f98852_5           56.9 KiB   conda  libffi-3.4.2-h7f98852_5.tar.bz2
+libgcc                                14.1.0        h77fa898_1           826.5 KiB  conda  libgcc-14.1.0-h77fa898_1.conda
+libgcc-ng                             14.1.0        h69a702a_1           50.9 KiB   conda  libgcc-ng-14.1.0-h69a702a_1.conda
+libgfortran                           14.1.0        h69a702a_1           50.9 KiB   conda  libgfortran-14.1.0-h69a702a_1.conda
+libgfortran-ng                        14.1.0        h69a702a_1           51 KiB     conda  libgfortran-ng-14.1.0-h69a702a_1.conda
+libgfortran5                          14.1.0        hc5f4f2c_1           1.4 MiB    conda  libgfortran5-14.1.0-hc5f4f2c_1.conda
+libgomp                               14.1.0        h77fa898_1           449.4 KiB  conda  libgomp-14.1.0-h77fa898_1.conda
+liblapack                             3.9.0         23_linux64_openblas  14.5 KiB   conda  liblapack-3.9.0-23_linux64_openblas.conda
+liblapacke                            3.9.0         23_linux64_openblas  14.5 KiB   conda  liblapacke-3.9.0-23_linux64_openblas.conda
+libnsl                                2.0.1         hd590300_0           32.6 KiB   conda  libnsl-2.0.1-hd590300_0.conda
+libopenblas                           0.3.27        pthreads_hac2b453_1  5.3 MiB    conda  libopenblas-0.3.27-pthreads_hac2b453_1.conda
+libsqlite                             3.46.1        hadc24fc_0           844.9 KiB  conda  libsqlite-3.46.1-hadc24fc_0.conda
+libstdcxx                             14.1.0        hc0a3c3a_1           3.7 MiB    conda  libstdcxx-14.1.0-hc0a3c3a_1.conda
+libstdcxx-ng                          14.1.0        h4852527_1           51 KiB     conda  libstdcxx-ng-14.1.0-h4852527_1.conda
+libuuid                               2.38.1        h0b41bf4_0           32.8 KiB   conda  libuuid-2.38.1-h0b41bf4_0.conda
+libzlib                               1.3.1         h4ab18f5_1           60.1 KiB   conda  libzlib-1.3.1-h4ab18f5_1.conda
+logmuse                               0.2.6         pyh8c360ce_0         10.5 KiB   conda  logmuse-0.2.6-pyh8c360ce_0.tar.bz2
+markdown-it-py                        3.0.0         pyhd8ed1ab_0         62.8 KiB   conda  markdown-it-py-3.0.0-pyhd8ed1ab_0.conda
+markupsafe                            2.1.5         py311h9ecbd09_1      26.4 KiB   conda  markupsafe-2.1.5-py311h9ecbd09_1.conda
+mdurl                                 0.1.2         pyhd8ed1ab_0         14.3 KiB   conda  mdurl-0.1.2-pyhd8ed1ab_0.conda
+nbformat                              5.10.4        pyhd8ed1ab_0         98.9 KiB   conda  nbformat-5.10.4-pyhd8ed1ab_0.conda
+ncurses                               6.4.20240210  h59595ed_0           874.7 KiB  conda  ncurses-6.4.20240210-h59595ed_0.conda
+numpy                                 2.1.1         py311h71ddf71_0      8.7 MiB    conda  numpy-2.1.1-py311h71ddf71_0.conda
+openssl                               3.3.2         hb9d3cd8_0           2.8 MiB    conda  openssl-3.3.2-hb9d3cd8_0.conda
+packaging                             24.1          pyhd8ed1ab_0         49.1 KiB   conda  packaging-24.1-pyhd8ed1ab_0.conda
+pandas                                2.2.2         py311h14de704_1      15 MiB     conda  pandas-2.2.2-py311h14de704_1.conda
+peppy                                 0.40.5        pyhd8ed1ab_0         28.6 KiB   conda  peppy-0.40.5-pyhd8ed1ab_0.conda
+pkgutil-resolve-name                  1.3.10        pyhd8ed1ab_1         10.5 KiB   conda  pkgutil-resolve-name-1.3.10-pyhd8ed1ab_1.conda
+plac                                  1.4.3         pyhd8ed1ab_0         25.4 KiB   conda  plac-1.4.3-pyhd8ed1ab_0.conda
+platformdirs                          4.2.2         pyhd8ed1ab_0         20.1 KiB   conda  platformdirs-4.2.2-pyhd8ed1ab_0.conda
+pluggy                                1.5.0         pyhd8ed1ab_0         23.3 KiB   conda  pluggy-1.5.0-pyhd8ed1ab_0.conda
+psutil                                6.0.0         py311h331c9d8_0      497 KiB    conda  psutil-6.0.0-py311h331c9d8_0.conda
+pulp                                  2.8.0         py311h38be061_0      12.7 MiB   conda  pulp-2.8.0-py311h38be061_0.conda
+pycparser                             2.22          pyhd8ed1ab_0         102.6 KiB  conda  pycparser-2.22-pyhd8ed1ab_0.conda
+pygments                              2.18.0        pyhd8ed1ab_0         858.7 KiB  conda  pygments-2.18.0-pyhd8ed1ab_0.conda
+pyparsing                             3.1.4         pyhd8ed1ab_0         88 KiB     conda  pyparsing-3.1.4-pyhd8ed1ab_0.conda
+pysocks                               1.7.1         pyha2e5f31_6         18.5 KiB   conda  pysocks-1.7.1-pyha2e5f31_6.tar.bz2
+pytest                                8.3.2         pyhd8ed1ab_0         251.6 KiB  conda  pytest-8.3.2-pyhd8ed1ab_0.conda
+python                                3.11.0        he550d4f_1_cpython   30 MiB     conda  python-3.11.0-he550d4f_1_cpython.conda
+python-dateutil                       2.9.0         pyhd8ed1ab_0         217.5 KiB  conda  python-dateutil-2.9.0-pyhd8ed1ab_0.conda
+python-fastjsonschema                 2.20.0        pyhd8ed1ab_0         220.9 KiB  conda  python-fastjsonschema-2.20.0-pyhd8ed1ab_0.conda
+python-tzdata                         2024.1        pyhd8ed1ab_0         140.6 KiB  conda  python-tzdata-2024.1-pyhd8ed1ab_0.conda
+python_abi                            3.11          5_cp311              6.1 KiB    conda  python_abi-3.11-5_cp311.conda
+pytz                                  2024.1        pyhd8ed1ab_0         184.1 KiB  conda  pytz-2024.1-pyhd8ed1ab_0.conda
+pyyaml                                6.0.2         py311h9ecbd09_1      207.7 KiB  conda  pyyaml-6.0.2-py311h9ecbd09_1.conda
+readline                              8.2           h8228510_1           274.9 KiB  conda  readline-8.2-h8228510_1.conda
+referencing                           0.35.1        pyhd8ed1ab_0         41.2 KiB   conda  referencing-0.35.1-pyhd8ed1ab_0.conda
+requests                              2.32.3        pyhd8ed1ab_0         57.4 KiB   conda  requests-2.32.3-pyhd8ed1ab_0.conda
+reretry                               0.11.8        pyhd8ed1ab_0         11.9 KiB   conda  reretry-0.11.8-pyhd8ed1ab_0.conda
+rich                                  13.7.1        pyhd8ed1ab_0         180 KiB    conda  rich-13.7.1-pyhd8ed1ab_0.conda
+rpds-py                               0.20.0        py311h9e33e62_1      324.1 KiB  conda  rpds-py-0.20.0-py311h9e33e62_1.conda
+setuptools                            73.0.1        pyhd8ed1ab_0         1.4 MiB    conda  setuptools-73.0.1-pyhd8ed1ab_0.conda
+six                                   1.16.0        pyh6c4a22f_0         13.9 KiB   conda  six-1.16.0-pyh6c4a22f_0.tar.bz2
+slack-sdk                             3.31.0        pyha770c72_0         143.8 KiB  conda  slack-sdk-3.31.0-pyha770c72_0.conda
+slack_sdk                             3.31.0        hd8ed1ab_0           6 KiB      conda  slack_sdk-3.31.0-hd8ed1ab_0.conda
+smart_open                            7.0.4         pyhd8ed1ab_0         50.5 KiB   conda  smart_open-7.0.4-pyhd8ed1ab_0.conda
+smmap                                 5.0.0         pyhd8ed1ab_0         22 KiB     conda  smmap-5.0.0-pyhd8ed1ab_0.tar.bz2
+snakemake                             8.18.0        hdfd78af_0           9.1 KiB    conda  snakemake-8.18.0-hdfd78af_0.tar.bz2
+snakemake-interface-common            1.17.3        pyhdfd78af_0         18 KiB     conda  snakemake-interface-common-1.17.3-pyhdfd78af_0.tar.bz2
+snakemake-interface-executor-plugins  9.2.0         pyhdfd78af_0         22.2 KiB   conda  snakemake-interface-executor-plugins-9.2.0-pyhdfd78af_0.tar.bz2
+snakemake-interface-report-plugins    1.0.0         pyhdfd78af_0         12.9 KiB   conda  snakemake-interface-report-plugins-1.0.0-pyhdfd78af_0.tar.bz2
+snakemake-interface-storage-plugins   3.3.0         pyhdfd78af_0         18.2 KiB   conda  snakemake-interface-storage-plugins-3.3.0-pyhdfd78af_0.tar.bz2
+snakemake-minimal                     8.18.0        pyhdfd78af_0         217.5 KiB  conda  snakemake-minimal-8.18.0-pyhdfd78af_0.tar.bz2
+stopit                                1.1.2         py_0                 15.7 KiB   conda  stopit-1.1.2-py_0.tar.bz2
+tabulate                              0.9.0         pyhd8ed1ab_1         35.1 KiB   conda  tabulate-0.9.0-pyhd8ed1ab_1.tar.bz2
+throttler                             1.2.2         pyhd8ed1ab_0         12.1 KiB   conda  throttler-1.2.2-pyhd8ed1ab_0.conda
+tk                                    8.6.13        noxft_h4845f30_101   3.2 MiB    conda  tk-8.6.13-noxft_h4845f30_101.conda
+tomli                                 2.0.1         pyhd8ed1ab_0         15.6 KiB   conda  tomli-2.0.1-pyhd8ed1ab_0.tar.bz2
+toposort                              1.10          pyhd8ed1ab_0         13.3 KiB   conda  toposort-1.10-pyhd8ed1ab_0.conda
+traitlets                             5.14.3        pyhd8ed1ab_0         107.6 KiB  conda  traitlets-5.14.3-pyhd8ed1ab_0.conda
+typing_extensions                     4.12.2        pyha770c72_0         39 KiB     conda  typing_extensions-4.12.2-pyha770c72_0.conda
+tzdata                                2024a         h8827d51_1           121.3 KiB  conda  tzdata-2024a-h8827d51_1.conda
+ubiquerg                              0.8.0         pyhd8ed1ab_0         20.2 KiB   conda  ubiquerg-0.8.0-pyhd8ed1ab_0.conda
+urllib3                               2.2.2         pyhd8ed1ab_1         92.8 KiB   conda  urllib3-2.2.2-pyhd8ed1ab_1.conda
+veracitools                           0.1.3         py_0                 6 KiB      conda  veracitools-0.1.3-py_0.tar.bz2
+wrapt                                 1.16.0        py311h9ecbd09_1      61.9 KiB   conda  wrapt-1.16.0-py311h9ecbd09_1.conda
+xz                                    5.2.6         h166bdaf_0           408.6 KiB  conda  xz-5.2.6-h166bdaf_0.tar.bz2
+yaml                                  0.2.5         h7f98852_2           87.1 KiB   conda  yaml-0.2.5-h7f98852_2.tar.bz2
+yte                                   1.5.4         pyha770c72_0         14 KiB     conda  yte-1.5.4-pyha770c72_0.conda
+zipp                                  3.20.1        pyhd8ed1ab_0         20.6 KiB   conda  zipp-3.20.1-pyhd8ed1ab_0.conda
+zstandard                             0.23.0        py311hbc35293_1      408.1 KiB  conda  zstandard-0.23.0-py311hbc35293_1.conda
+zstd                                  1.5.6         ha6fb4c9_0           541.8 KiB  conda  zstd-1.5.6-ha6fb4c9_0.conda
+mohanrahan@l02968:~/local_run$ ls 
+Snakefile  pixi.lock  pixi.toml  pixi_env.def  setup_env.sh  test.py
+mohanrahan@l02968:~/local_run$ sudo singularity build pixi_env.sif pixi_env.def
+[sudo] password for mohanrahan: 
+INFO:    Starting build...
+...
+...
+...
+This script will automatically download and install Pixi (latest) for you.
+Getting it from this url: https://github.com/prefix-dev/pixi/releases/latest/download/pixi-x86_64-unknown-linux-musl.tar.gz
+######################################################################## 100.0%
+The 'pixi' binary is installed into '/root/.pixi/bin'
+Updating '/root/.bashrc'
+Please restart or source your shell.
++ export PATH=/root/.pixi/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++ cd /app
++ /root/.pixi/bin/pixi install
+✔ The default environment has been installed.
++ echo export PATH="/root/.pixi/bin:$PATH"
+INFO:    Adding environment to container  
+INFO:    Adding runscript
+INFO:    Creating SIF file...
+INFO:    Build complete: pixi_env.sif
+mohanrahan@l02968:~/local_run$ ls 
+Snakefile  pixi.lock  pixi.toml  pixi_env.def  pixi_env.sif  setup_env.sh  test.py
+
+mohanrahan@l02968:~/local_run$ pixi run snakemake --use-singularity
+
+mohanrahan@l02968:~/local_run$ ls 
+Snakefile  pixi.lock  pixi.toml  pixi_env.def  pixi_env.sif  setup_env.sh  test.py
+mohanrahan@l02968:~/local_run$ mv pixi_env.sif
+mv: missing destination file operand after 'pixi_env.sif'
+Try 'mv --help' for more information.
+mohanrahan@l02968:~/local_run$ mv pixi_env.sif pix-env.sif
+mohanrahan@l02968:~/local_run$ pixi run snakemake --use-singularity
+Assuming unrestricted shared filesystem usage.
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+hello        1
+total        1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Sep  5 15:47:39 2024]
+localrule hello:
+    output: hello.txt
+    jobid: 0
+    reason: Missing output files: hello.txt
+    resources: tmpdir=/tmp
+
+Activating singularity image ./pix-env.sif
+[Thu Sep  5 15:47:40 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2024-09-05T154739.399532.snakemake.log
+mohanrahan@l02968:~/local_run$ rm hello.txt
+mohanrahan@l02968:~/local_run$ cd ..
+mohanrahan@l02968:~$ sp local_run/ /mnt/c/git/pixi_container_snake
+sp: command not found
+mohanrahan@l02968:~$ cp local_run/ /mnt/c/git/pixi_container_snake
+cp: -r not specified; omitting directory 'local_run/'
+mohanrahan@l02968:~$ cp -r local_run/ /mnt/c/git/pixi_container_snake
