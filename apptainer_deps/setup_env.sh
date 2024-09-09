@@ -4,7 +4,7 @@
 if ! command -v pixi &> /dev/null; then
     echo "Installing pixi..."
     curl -fsSL https://pixi.sh/install.sh | bash
-    export PATH="$HOME/.pixi/bin:$PATH"
+    export PATH="$PWD/.pixi/bin:$PATH"
 else
     echo "pixi is already installed."
 fi
@@ -14,4 +14,4 @@ echo "Installing dependencies..."
 pixi install
 
 # Add pixi's bin to PATH
-export PATH="$HOME/.pixi/env/bin:$PATH"
+export PATH="$PWD/.pixi/env/bin:$PATH"
