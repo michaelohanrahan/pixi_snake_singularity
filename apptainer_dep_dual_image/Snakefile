@@ -1,0 +1,4 @@
+singularity: "./pix-env.sif"
+rule hello:
+    output:'hello.txt'
+    script:'test.py'

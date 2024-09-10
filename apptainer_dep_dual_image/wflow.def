@@ -1,0 +1,18 @@
+Bootstrap: docker
+From: ubuntu:20.04
+
+%post
+    # Install Julia
+    apt-get update && apt-get install -y wget
+    wget https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.5-linux-x86_64.tar.gz
+    tar zxvf julia-1.10.5-linux-x86_64.tar.gz -C /opt/
+    ln -s /opt/julia-1.10.5/bin/julia /usr/local/bin/julia
+
+    # Optionally, add Julia to PATH in .bashrc
+    echo 'export PATH="$PATH:/opt/julia-1.10.5/bin"' >> ~/.bashrc
+
+    # Install Wflow and its dependencies
+    julia -e 'using Pkg; Pkg.Registry.add("General"); Pkg.add(PackageSpec(name="Wflow", version="0.7.3"))'
+
+%environment
+    export PATH="/opt/julia-1.10.5/bin:$PATH"
